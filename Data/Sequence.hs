@@ -57,15 +57,15 @@ module Data.Sequence (
     (|>),           -- :: Seq a -> a -> Seq a
     (><),           -- :: Seq a -> Seq a -> Seq a
     fromList,       -- :: [a] -> Seq a
-    fromFunction,   -- :: Int -> (Int -> a) -> Seq a
+    fromFunction,   -- :: Integer -> (Int -> a) -> Seq a
     fromArray,      -- :: Ix i => Array i a -> Seq a
     -- ** Repetition
-    replicate,      -- :: Int -> a -> Seq a
+    replicate,      -- :: Integer -> a -> Seq a
     replicateA,     -- :: Applicative f => Int -> f a -> f (Seq a)
     replicateM,     -- :: Monad m => Int -> m a -> m (Seq a)
-    cycleTaking,    -- :: Int -> Seq a -> Seq a
+    cycleTaking,    -- :: Integer -> Seq a -> Seq a
     -- ** Iterative construction
-    iterateN,       -- :: Int -> (a -> a) -> a -> Seq a
+    iterateN,       -- :: Integer -> (a -> a) -> a -> Seq a
     unfoldr,        -- :: (b -> Maybe (a, b)) -> b -> Seq a
     unfoldl,        -- :: (b -> Maybe (b, a)) -> b -> Seq a
     -- * Deconstruction
@@ -74,7 +74,7 @@ module Data.Sequence (
 
     -- ** Queries
     null,           -- :: Seq a -> Bool
-    length,         -- :: Seq a -> Int
+    length,         -- :: Seq a -> Integer
     -- ** Views
     ViewL(..),
     viewl,          -- :: Seq a -> ViewL a
